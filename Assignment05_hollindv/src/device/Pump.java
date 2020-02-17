@@ -10,5 +10,21 @@
 package device;
 
 public class Pump extends Device {
+	private float maxFlowRate;
+
+	/***
+	 * Get the max flow rate of the pump
+	 * @return
+	 */
+	public float getMaxFlowRate() {
+		return maxFlowRate;
+	}
+	/***
+	 * Define the max flow rate of the pump
+	 * @param maxFlowRate
+	 */
+	public void setMaxFlowRate(float maxFlowRate) {
+		this.maxFlowRate = maxFlowRate;
+	}
 
 }
