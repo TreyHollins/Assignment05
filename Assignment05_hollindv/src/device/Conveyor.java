@@ -10,21 +10,28 @@
 package device;
 
 public class Conveyor extends Device {
-	private int Speed;
+	private int speed;
 
+	public Conveyor(String partNumber, String SKU, int speed) {
+		super(partNumber, SKU);
+		setSpeed(speed);
+	}
 	/***
 	 * Get the speed of the conveyer belt in feet per second
 	 * @return
 	 */
 	public int getSpeed() {
-		return Speed;
+		return speed;
 	}
 	/***
 	 * Define the speed of the conveyer in feet per second
 	 * @param speed
 	 */
 	public void setSpeed(int speed) {
-		Speed = speed;
+		this.speed = speed;
+	}
+	public String toString() {
+		return super.toString() + ", Speed: " + speed;
 	}
 
 }

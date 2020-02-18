@@ -12,6 +12,11 @@ package device;
 public class Pump extends Device {
 	private float maxFlowRate;
 
+	public Pump (String partNumber, String SKU, float maxFlowRate) {
+		super(partNumber, SKU);
+		setMaxFlowRate(maxFlowRate);
+	}
+	
 	/***
 	 * Get the max flow rate of the pump
 	 * @return
@@ -25,6 +30,9 @@ public class Pump extends Device {
 	 */
 	public void setMaxFlowRate(float maxFlowRate) {
 		this.maxFlowRate = maxFlowRate;
+	}
+	public String toString() {
+		return super.toString() + ", Max Flow Rate: " + maxFlowRate;
 	}
 
 }

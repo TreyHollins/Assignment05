@@ -9,6 +9,24 @@
  */
 package factory;
 
-public class Factory {
+import device.Conveyor;
+import device.Motor;
+import device.Pump;
 
+public class Factory {
+	private Motor m;
+	private Pump p;
+	private Conveyor c;
+	
+	public Factory(Motor motor, Pump pump, Conveyor conveyor) {
+		this.m = motor;
+		this.p = pump;
+		this.c = conveyor;
+	}
+	
+	public String toString() {
+		return "Motor: " + this.m.toString() + "\n" +
+	           "Pump: " + this.p.toString() + "\n" +
+	           "Conveyor: " + this.c.toString();
+	}
 }

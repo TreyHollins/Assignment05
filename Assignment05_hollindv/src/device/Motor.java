@@ -11,6 +11,11 @@ package device;
 
 public class Motor extends Device {
 	private int maxRPM;
+	
+	public Motor (String partNumber, String SKU, int maxRPM) {
+		super(partNumber, SKU);
+		setMaxRPM(maxRPM);
+	}
 
 	/***
 	 * Get the MaxRPM of the motor
@@ -25,5 +30,13 @@ public class Motor extends Device {
 	 */
 	public void setMaxRPM(int maxRPM) {
 		this.maxRPM = maxRPM;
+	}
+	
+	public void setMaxRPM() {
+		this.maxRPM = 0;
+	}
+	
+	public String toString() {
+		return super.toString() + ", Max RPM: " + maxRPM;
 	}
 }

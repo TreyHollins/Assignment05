@@ -14,6 +14,11 @@ public class Device {
 	private String SKU;
 	private Boolean OnOrOff;
 	
+	public Device (String partNumber, String SKU) {
+		setPartNumber(partNumber);
+		setSKU(SKU);
+		this.OnOrOff = false;
+	}
 	/***
 	 * Get the part number
 	 * @return part number
@@ -44,16 +49,19 @@ public class Device {
 	}
 	/***
 	 * Get on or off
-	 * @return OnOrOff
+	 * @return OnOrOff true = on false = off
 	 */
 	public Boolean getOnOrOff() {
 		return OnOrOff;
 	}
 	/***
 	 * Define whether the device is on or off
-	 * @param onOrOff
+	 * @param onOrOff 
 	 */
 	public void setOnOrOff(Boolean onOrOff) {
 		OnOrOff = onOrOff;
+	}
+	public String toString() {
+		return "Part Number: " + partNumber + ", SKU: " + SKU + ", On OR Off: " + OnOrOff;
 	}
 }
